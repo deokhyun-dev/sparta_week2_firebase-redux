@@ -37,6 +37,18 @@ function Update(props) {
     // history.push("/");
   };
 
+  const updateWord = () => {
+    const newWord = {
+      word: word_Ref,
+      description: description_Ref,
+      example: example_Ref
+    }
+
+    dispatch(updateWordFB(wordData, tempWord.id));
+  }
+
+  
+
   return (
     <>
       <Header>{tempWord ? tempWord.word : ""} 수정하기</Header>
@@ -44,6 +56,7 @@ function Update(props) {
         <TextField
           label={tempWord ? tempWord.word : ""}
           type="text"
+          defaultValue="alsdkfjasdf"
           inputRef={word}
           style={{
             width: "90%",

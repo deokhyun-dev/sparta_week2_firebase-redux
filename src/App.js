@@ -29,9 +29,7 @@ function App() {
         <Route path="/detail/:index">
           <WordDetail />
         </Route>
-        <Route path="/register">
-          <RegisterWord />
-        </Route>
+        <Route path="/register" component={RegisterWord} />
         <Route path="/update/:index">
           <Update />
         </Route>
